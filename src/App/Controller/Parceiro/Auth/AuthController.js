@@ -1,4 +1,4 @@
-const connection = require("../../../../Config/Database/connection");
+const connection = require("../../../Config/Database/connection");
 const md5 = require("md5");
 
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
 
         const { email, password } = request.body;
         
-       const Login = await connection("tb_parceiro").select('email', "password", 'id');
+       const Login = await connection("tb_parceiro").select('email', "password", 'id').where("password", md5(password)).andWhere('email', email).first();
        console.log(Login);
         try {
             if(Login.email == email && Login.password == md5(password)) {
