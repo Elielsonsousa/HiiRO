@@ -7,8 +7,8 @@ module.exports = {
 
         const { email, password } = request.body;
         
-       const Login = await connection("tb_parceiro").select('email', "password", 'id');
-       console.log(Login);
+       const Login = await connection("tb_parceiro").select('email', "password", 'id').where("password", md5(password)).andWhere('email', email).first();
+       console.log(request.body);
         try {
             if(Login.email == email && Login.password == md5(password)) {
                 return response.status(200).json({
