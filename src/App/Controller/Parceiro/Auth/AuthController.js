@@ -9,14 +9,12 @@ module.exports = {
         
        const Login = await connection("tb_parceiro").select('email', "password", 'id').where("password", md5(password)).andWhere('email', email).first();
        console.log(request.body);
+       console.log('aqui' + Login);
         try {
-            if(Login.email == email && Login.password == md5(password)) {
                 return response.status(200).json({
                     id: Login.id,
                     message: "Logged in User"
                 });
-            }
-
         } catch (error) {
             console.log(error);
             return response.status(401).json("Login or Password Invalid");
