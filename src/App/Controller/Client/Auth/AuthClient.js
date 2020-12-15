@@ -8,8 +8,7 @@ module.exports = {
         const { email, password } = request.body;
 
        const Login = await connection("tb_cliente").where("password", md5(password)).select('email', 'password', 'id').andWhere('email', email).first();
-       console.log(md5(password)); 
-       console.log(Login);
+       
         try {
                 return response.status(200).json({
                     id: Login.id,

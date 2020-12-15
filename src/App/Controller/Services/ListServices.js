@@ -6,7 +6,7 @@ module.exports = {
     async ListBaba(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Babá").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Babá").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -18,7 +18,7 @@ module.exports = {
     async LisDiarista(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Diarista (Faxina)").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Diarista (Faxina)").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -29,7 +29,7 @@ module.exports = {
     async listEsteticista(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Esteticista").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Esteticista").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -40,7 +40,7 @@ module.exports = {
     async listEncanador(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Encanador").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Encanador").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -51,7 +51,7 @@ module.exports = {
     async listFreelancer(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Freelancer").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Freelancer").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -62,7 +62,7 @@ module.exports = {
     async listGarcom(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Garçom").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Garçom").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -73,7 +73,7 @@ module.exports = {
     async listMontador(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Montador de móveis").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Montador de móveis").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -84,7 +84,7 @@ module.exports = {
     async listPasseio(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Passeio com Pets").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Passeio com Pets").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -95,7 +95,7 @@ module.exports = {
     async listPedreiro(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Pedreiro").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Pedreiro").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -106,7 +106,7 @@ module.exports = {
     async listPintura(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Pintura").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Pintura").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -117,7 +117,7 @@ module.exports = {
     async listSeguranca(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Segurança").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Segurança").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -128,7 +128,7 @@ module.exports = {
     async listJardinagem(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Jardinagem").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Jardinagem").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -139,7 +139,7 @@ module.exports = {
     async listFazTudo(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Faz Tudo").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Faz Tudo").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -151,7 +151,7 @@ module.exports = {
     async listCuidador(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Cuidador").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Cuidador").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -162,7 +162,7 @@ module.exports = {
     async listEletricista(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Eletricista").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Eletricista").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -173,7 +173,7 @@ module.exports = {
     async listGesseiro(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Gesseiro").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Gesseiro").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -184,7 +184,7 @@ module.exports = {
     async listManicure(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Manicure").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Manicure").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -195,7 +195,7 @@ module.exports = {
     async listMarceneiro(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Marceneiro").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Marceneiro").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -206,7 +206,7 @@ module.exports = {
     async listMassagista(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Massagista").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Massagista").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -217,7 +217,7 @@ module.exports = {
     async listMecanico(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Mecânico").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Mecânico").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -228,7 +228,7 @@ module.exports = {
     async listTecnico(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Técnico").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Técnico").select("*");
             return response.json({ list });
 
         } catch (error) {
@@ -239,7 +239,7 @@ module.exports = {
     async listProfessor(request, response) {
 
         try {
-            const list = await connection("create_user").where("selectedservice", "Professor").select("*");
+            const list = await connection("tb_parceiro").where("selectedservice", "Professor").select("*");
             return response.json({ list });
 
         } catch (error) {
