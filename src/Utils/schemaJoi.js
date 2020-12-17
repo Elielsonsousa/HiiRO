@@ -6,9 +6,8 @@ const signUp = Joi.object({
         .pattern(/^[a-zA-Z\s.]{2,80}$/),
 
     email: Joi.string()
-        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'com.br'] } })
-        .required(),
-
+        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'com.br'] } }),
+        
     password: Joi.string()
         .pattern(/^[a-zA-Z0-9?!@#$%"&*()_-]{1,32}$/),
 });
