@@ -3,12 +3,15 @@ const Joi = require("@hapi/joi");
 const signUp = Joi.object({   
 
     name: Joi.string()
+        .required()
         .pattern(/^[a-zA-Z\s.]{2,80}$/),
 
     email: Joi.string()
+        .required()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'com.br'] } }),
         
     password: Joi.string()
+        .required()
         .pattern(/^[a-zA-Z0-9?!@#$%"&*()_-]{1,32}$/),
 });
 

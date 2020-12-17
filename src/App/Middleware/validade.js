@@ -3,7 +3,9 @@ const schema = require("../../Utils/schemaJoi");
 const SignUp = async (request, response, next) => {
 
     const { name, email, password } = request.body;
-
+    
+    console.log("testando signUp");
+    console.log(email);
     try {
       const { error } = await schema.signUp.validateAsync({
         name, email, password,
