@@ -3,17 +3,13 @@ const Joi = require("@hapi/joi");
 const signUp = Joi.object({   
 
     name: Joi.string()
-        .min(3)
-        .max(50)
         .pattern(/^[a-zA-Z\s.]{2,80}$/),
 
     email: Joi.string()
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net', 'com.br'] } }),
         
     password: Joi.string()
-        .min(1)
-        .max(32)
-        .pattern(/^[a-zA-Z0-9?!@#$%"&*()_-]{8,20}$/),
+        .pattern(/^[a-zA-Z0-9?!@#$%"&*()_-]{1,32}$/),
 });
 
 const Update = Joi.object({
@@ -27,10 +23,8 @@ const Update = Joi.object({
         .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
 
     password: Joi.string()
-        .min(1)
-        .max(32)
         .optional()
-        .regex(/^[a-zA-Z0-9?!@#$%¨&*()_-]{8,20}$/),
+        .regex(/^[a-zA-Z0-9?!@#$%¨&*()_-]{1,32}$/),
 });
 
 module.exports = {
